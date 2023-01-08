@@ -17,6 +17,12 @@ app.post("/api/data", (req, res) => {
 	return res.sendStatus(200);
 });
 
+app.all("/api/all", (req, res) => {
+	console.log(req.body);
+
+	return res.sendStatus(200);
+});
+
 app.listen(PORT, () => {
 	console.log(`Express server is running on port ${PORT}`);
 });
