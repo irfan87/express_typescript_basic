@@ -1,4 +1,5 @@
 import express, { urlencoded, Request, Response, NextFunction } from "express";
+import helmet from "helmet";
 
 const app = express();
 
@@ -7,6 +8,7 @@ const PORT = 3000 || process.env.PORT;
 app.use(express.json());
 
 app.use(urlencoded({ extended: true }));
+app.use(helmet());
 
 // custom middleware function
 const middleware =
